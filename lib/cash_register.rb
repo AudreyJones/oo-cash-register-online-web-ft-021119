@@ -27,9 +27,13 @@ class CashRegister
     @total
   end
 
-  def add_item(title, price)
-    self.total = self.total + (price)
+  def add_item(title, price, quantity = 1)
+    self.total = self.total + (price * quantity)
     self.total
-# binding.pry
+  end
+
+  def apply_discount
+    self.total = self.total - (self.total * discount.percents)
+    "After the discount, the total comes to #{self.total}."
   end
 end
