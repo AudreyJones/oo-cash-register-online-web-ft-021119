@@ -29,10 +29,11 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    binding.pry
+    
     self.total = self.total + (price * quantity)
     self.total
     @items.fill {|title| title * quantity}
+    binding.pry
   end
 
   def apply_discount
