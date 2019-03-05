@@ -13,7 +13,7 @@ require 'pry'
                         # In what method of the class are you working with an individual item?
 
 class CashRegister
-  attr_accessor :total, :discount
+  attr_accessor :total, :discount, :items
   def initialize(discount = 0)
     @total = 0
     @discount = discount
@@ -42,6 +42,6 @@ class CashRegister
   end
 
   def items
-
+    @items
   end
 end
